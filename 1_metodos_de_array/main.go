@@ -35,6 +35,12 @@ func main() {
  word_1, word_2 := joinsArr(arrWord)
 
  fmt.Appendln(word_1, word_2)
+
+ arrLetter := []string{"A", "B", "C", "D"}
+
+ res_1, res_2 :=  slicesfunc(arrLetter)
+
+ fmt.Appendln([]byte(res_1[]), res_2)
 }
 
 
@@ -131,4 +137,14 @@ func joinsArr (arrWord []string) (string, string){
 	 resJoinStringMethod = strings.Join(arrWord, " ")
 
 	 return resJoin,  resJoinStringMethod
+}
+
+// slice 
+
+func slicesfunc (data []string) ([]string, []string) {
+  copy := append([]string{}, data[1:3]...)
+
+	part := data[1:3]
+
+	return  copy, part
 }

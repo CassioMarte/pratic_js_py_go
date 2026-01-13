@@ -94,3 +94,21 @@ const part_2 = sliceArr.slice(3)
 
 console.log(part_2) //[ 'item 4', 'item 5' ]
 
+
+
+//splice  array.splice(inicio, quantidade, ...novosItens)
+
+const spliceArr = ["position 0", "position 1", "position 2", "position 3", "position 4", "position 5", "position 6"]
+
+console.log("arr original", spliceArr)
+
+const removeItensOne_three = spliceArr.splice(1, 4)
+
+console.log("arr original após remove", spliceArr)
+console.log("1 a 3", removeItensOne_three)
+
+const add_itens = spliceArr.splice(3, 0, "item_novo_1", "item_novo_2")
+
+console.log("add", add_itens)
+
+console.log("arr após add a partir da terceira posição", spliceArr)
