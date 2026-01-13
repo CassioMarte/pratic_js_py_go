@@ -1,1 +1,0 @@
-# pratic_js_py_go
