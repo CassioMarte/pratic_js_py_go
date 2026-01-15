@@ -79,3 +79,20 @@ part = arr[1:3]
 
 
 print(part) #['B', 'C']
+
+# sort 
+arrSort = [15, 84, 1, 99, 10, 54, 20]
+
+arrSort.sort()
+
+arrSortOrd = sorted(arrSort)
+
+print(f"arrOrd {arrSort}, arrSortOrd {arrSortOrd}")
+
+# reverse maior para menor 
+
+arrSort.sort(reverse=True)
+
+arrSortOrdRev = sorted(arrSort, reverse=True)
+
+print(f"arrOrdRev {arrSort}, arrSortOrdRev {arrSortOrdRev}")

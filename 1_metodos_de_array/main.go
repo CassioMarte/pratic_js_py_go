@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 	"slices"
+	"sort"
 	"strings"
 )
 
@@ -41,6 +42,12 @@ func main() {
  res_1, res_2 :=  slicesfunc(arrLetter)
 
  fmt.Appendln([]byte(res_1[]), res_2)
+
+ arrSort := []int{15, 84, 1, 99, 10, 54, 20}
+
+ sort_1, sort_2 := sortFunc(arrSort)
+
+ fmt.Appendln(sort_1, sort_2)
 }
 
 
@@ -147,4 +154,35 @@ func slicesfunc (data []string) ([]string, []string) {
 	part := data[1:3]
 
 	return  copy, part
+}
+
+// sort
+
+//obs: copy 
+/**
+ Para criar uma copiar preciso:
+ 1- criar um novo slice para alocar espaço em memoria
+ arrOrd = make([]int, len(data))
+ 2- fazer o copy
+ copy(arrOrd, data)
+*/
+
+func sortFunc (data []int) ([]int, []int){
+	arrOrd := make([]int, len(data))
+	copy(arrOrd, data)
+
+	for i := 0; i < len(arrOrd); i++ {
+		for j := i + 1; j < len(arrOrd); j++{
+			if arrOrd[i] > arrOrd[j]{
+				arrOrd[i], arrOrd[j] = arrOrd[j], arrOrd[i]
+			}
+		}
+	}
+
+	sort.Ints(data)
+ 
+	//reverse inverte para a ordem ficar do maior para menor
+	//sort.Sort(sort.Reverse(sort.IntSlice(arr)))
+
+	return  arrOrd, data
 }

@@ -112,3 +112,11 @@ const add_itens = spliceArr.splice(3, 0, "item_novo_1", "item_novo_2")
 console.log("add", add_itens)
 
 console.log("arr após add a partir da terceira posição", spliceArr)
+
+// sort
+
+const arrSort = [15, 84, 1, 99, 10, 54, 20]
+
+const arrOrd = arrSort.sort((a , b)=> a - b)
+
+console.log("ord", arrOrd)
