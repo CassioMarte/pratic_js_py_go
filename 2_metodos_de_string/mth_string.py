@@ -56,3 +56,48 @@ titleAnime = "dragon ball z" # Dragon Ball Z
 tt = titleAnime.title()
 
 print(f"up {up}, low {lw}, name {name}, titulo {tt}")
+
+
+# trim() py = strip
+
+wordSpace = " oii eu tenho espaços no começo e fim  "
+
+notSpace = wordSpace.strip()
+
+print(f"com espaços {list(wordSpace)}, sem espaços {list(notSpace)}")
+
+# py não tem substring mas podemos usar slice
+
+substringPhrase =  "Removi o resto como substring"
+
+print(f"removi esta parte com slice {substringPhrase[5:12]}")
+
+# indexOf
+
+letters =  "abcde"
+
+c = letters.find("c")
+
+print(f"indexOf em py é find {c}")
+
+# // startsWith() / endsWith() 
+
+text = "Fullmetal Alchemist"
+
+start = text.startswith("Full")  
+end = text.endswith("mist")   
+
+print(f"start {start}, end {end}")
+
+# charAt
+
+textChar = "Fullmetal"
+
+f = textChar[0]
+
+print(f"F em fullmetal {f}")
+
+# repeat
+
+repetido = "ha" * 3
+print(repetido)  # hahaha

@@ -24,6 +24,18 @@ func main() {
 
 	fmt.Println(replace, replaceAll)
 
+	trim := trimFunc("  com espaço para fazer trim  ")
+
+	fmt.Println(trim)
+
+	substring := substringFunc("Removi o resto como substring")
+
+	fmt.Println(substring)
+
+	indexOf := indexOfFunc("abcde")
+
+	fmt.Println(indexOf)
+
 }
 
 func splitFunc(wordSemicol,word string) ([]string, []string) {
@@ -60,3 +72,65 @@ func upperLowerfunc (upperToLower, lowerToUpper, formName string) (string, strin
 
 	return up, lw, 
 }
+
+
+// trim em go strings.TrimSpace
+
+func trimFunc (data string) string {
+	return strings.TrimSpace(data)
+}
+
+// go não tem substring mas posso usar slice [:]
+
+/**
+  Em Go, string é uma sequência de bytes, não de letras.
+  Caracteres acentuados usam mais de 1 byte.
+  rune representa um caractere Unicode.
+  Converter para []rune evita cortar letras no meio.
+*/
+
+func substringFunc(data string) (string, string) {
+	sub := data[5:12] // apenas seguro para ASCII
+
+	runeData := []rune(data)
+	subRune := string(runeData[5:12]) // seguro para Unicode
+
+	return sub, subRune
+}
+
+
+// obs: se data for menos que 12 da erro ok 
+
+//indexOf 
+
+func indexOfFunc(data string) int {
+	resIndex := strings.Index(data, "c")
+
+	return resIndex
+}
+
+// startsWith() / endsWith()
+
+func startAndEnd(data string) (bool, bool) {
+	start := strings.HasPrefix(data, "Full")
+	end := strings.HasSuffix(data, "mist")
+
+	return  start, end
+}
+
+// charAt()
+// text := "makoto"
+
+// fmt.Println(text[0])        // 109 (byte)
+// fmt.Println(string(text[0])) // "m"
+
+// r := []rune(text)
+// fmt.Println(string(r[0])) // "m"
+
+
+//repeat
+
+// import "strings"
+
+// repetido := strings.Repeat("ha", 3)
+// fmt.Println(repetido) // hahaha

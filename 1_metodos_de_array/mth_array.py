@@ -1,3 +1,5 @@
+from functools import reduce
+
 # 1- map e compression duas formas de fazer a mesmo coisa
 
 arrMap = [1,2,3,4,5,6,7,8,9 ]
@@ -6,6 +8,7 @@ arrMapPlusTwo = list(map(lambda n: n * 2, arrMap))
 
 print(arrMapPlusTwo)
 
+                      # n vezes dois para cada n em arr_map
 arrMapPlusTwoCompre = [n * 2 for n in arrMap]
 
 print(arrMapPlusTwoCompre)
@@ -18,9 +21,25 @@ arrFilter = list(range(5))
 
 arrPar = list(filter(lambda n: n % 2 == 0, arrFilter))
 
+              #n para cada n em arrFilter, se n é par     
 arrParCompres = [n for n in arrFilter if n % 2 == 0]
 
 print(f"arrParFilter, {arrPar} ou arrParCompres {arrParCompres}")
+
+# reduce
+
+# from functools import reduce
+arrRed = list(range(10))
+
+total = reduce(lambda acc, value: acc + value, arrRed, 0)
+
+totalSum = sum(arrRed)
+
+# from functools import reduce
+
+# arr = list(range(10))
+# total = reduce(lambda acc, now: acc + now, arr, 0)
+
 
 # append e pop 
 
@@ -79,6 +98,13 @@ part = arr[1:3]
 
 
 print(part) #['B', 'C']
+
+# splice
+
+#arr.insert(1, "X")
+# arr[1:2] = ["X"]
+
+
 
 # sort 
 arrSort = [15, 84, 1, 99, 10, 54, 20]

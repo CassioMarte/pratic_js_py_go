@@ -86,7 +86,8 @@ console.log(hi, hi_traco)
 
 const sliceArr = ["item 1", "item 2", "item 3", "item 4", "item 5"]
 
-const part = sliceArr.slice(1, 4)
+const part = sliceArr.slice(1, 4) // é igual a sliceArr[1:4]
+
 
 console.log("part 1 a 4", part) //part 1 a 4 [ 'item 2', 'item 3', 'item 4' ]
 

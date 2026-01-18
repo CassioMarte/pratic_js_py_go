@@ -77,6 +77,16 @@ func filter(data []int) []int{
 	return par
 }
 
+/*
+ arr := []int{0,1,2,3,4,5,6,7,8,9}
+  total := 0
+
+for _, n := range arr {
+    total += n
+}
+
+*/
+
 
 // append e algo similar a pop
 
@@ -180,7 +190,7 @@ func sortFunc (data []int) ([]int, []int){
 	}
 
 	sort.Ints(data)
- 
+  
 	//reverse inverte para a ordem ficar do maior para menor
 	//sort.Sort(sort.Reverse(sort.IntSlice(arr)))
 

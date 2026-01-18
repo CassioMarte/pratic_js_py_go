@@ -72,3 +72,56 @@ const prota = "makoto"
 const name =  prota.charAt(0).toLocaleUpperCase() + prota.slice(1)
 
 console.log("up", uperWord, "low", lowWOrd, "name", name)
+
+// trim()
+
+const wordSpace = " oii eu tenho espaços no começo e fim  "
+
+const notSpace = wordSpace.trim()
+
+console.log("wor", wordSpace.split(""), "sem espeços", notSpace.split(""))
+
+// substring() substring(inicio, fim) / slice()
+
+const substringPhrase =  "Removi o resto como substring"
+
+const resSub = substringPhrase.substring(5, 12)
+
+console.log("sub", resSub)
+
+const slicePhrase = "Usei slice pq aceita dados negativos"
+
+const resSlice =  slicePhrase.slice(5, 12)
+
+console.log("sli", resSlice)
+
+// indexOf() / includes
+
+const letters =  "abcde"
+
+const c = letters.indexOf('c') //indexOf 2
+
+const c_inclu = letters.includes("c") // includes true
+
+console.log("indexOf", c, "includes", c_inclu)
+
+
+// startsWith() / endsWith()
+
+const file = "studiesData.doc"
+
+const start = file.startsWith("stud")
+
+const end = file.endsWith("doc")
+
+console.log("start stud", start, "termina com doc", end)
+
+// charAt()
+
+const caract = "Fullmetal".charAt(0)
+
+console.log(caract)
+
+// repeat
+
+const repetido = "ha".repeat(3); // "hahaha"
