@@ -89,6 +89,23 @@ func trimFunc (data string) string {
   Converter para []rune evita cortar letras no meio.
 */
 
+/*
+  Explicando rune:
+
+	 go enxerga strings como bytes ex: string ação = [97 195 167 195 163 111]
+
+	 quando uso []rune converto de bytes para Unicode ação fica [97 231 227 111]
+
+	 dai string(com a variavel de rune ) = ação
+
+	 s := "ação"
+
+  fmt.Println([]byte(s)) // [97 195 167 195 163 111]
+  fmt.Println([]rune(s)) // [97 231 227 111]
+
+  fmt.Println(string([]rune(s))) // "ação"
+ */
+
 func substringFunc(data string) (string, string) {
 	sub := data[5:12] // apenas seguro para ASCII
 

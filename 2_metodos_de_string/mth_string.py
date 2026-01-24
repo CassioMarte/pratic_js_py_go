@@ -78,7 +78,11 @@ letters =  "abcde"
 
 c = letters.find("c")
 
+x = letters.index("c")
+
 print(f"indexOf em py é find {c}")
+
+print(f"indexOf em py é index {x}")
 
 # // startsWith() / endsWith() 
 
